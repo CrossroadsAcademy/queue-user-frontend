@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:queue/Login/forgot_password/forgot_password.dart';
+import 'package:queue/Login/OTP/otp.dart';
 
-
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class ForgotPassword extends StatefulWidget {
+  const ForgotPassword({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _ForgotPasswordState createState() => _ForgotPasswordState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _ForgotPasswordState extends State<ForgotPassword> {
 
   final _formKey = GlobalKey<FormState>();
 
@@ -25,15 +23,19 @@ class _LoginPageState extends State<LoginPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children:[
                 const SizedBox(height: 70,),
-                const Text("Login to Account.",style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),),
-                const Text("Login with your Username & Password.",style: TextStyle(color: Colors.black26,fontSize: 15),),
-                const SizedBox(height: 40,),
+                const Text("Forgot Password.",style: TextStyle(color: Colors.black,fontSize: 30,fontWeight: FontWeight.bold),),
+                const Text("Don't worry! It happens. Please enter the phone no.",style: TextStyle(color: Colors.black26,fontSize: 15),),
+                const SizedBox(height: 60,),
                 Center(
                   child: Image.asset(
-                      "assets/images/login.png"
+                      "assets/images/forgot.png"
                   ),
                 ),
-                const SizedBox(height: 40,),
+                const SizedBox(height: 60,),
+
+                const Center(child: Text("Enter your Registered Phone no.",style: TextStyle(color: Colors.black,fontSize: 16,fontWeight: FontWeight.bold),)),
+
+                const SizedBox(height: 10,),
 
                 ///form///
 
@@ -42,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Column(
                       children: [
 
-                        ///Username///
+                        ///Phone///
 
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -59,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                               enabledBorder: InputBorder.none,
                               errorBorder: InputBorder.none,
                               disabledBorder: InputBorder.none,
-                              labelText: 'Username',
+                              labelText: 'Phone',
                               labelStyle: TextStyle(
                                 color: Color(0xffAEAEAE),
                               ),
@@ -69,51 +71,13 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 10,),
+                        const SizedBox(height: 20,),
 
-                        ///Password///
 
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: const Color(0xFFE6E6E6),
-                          ),
-                          child: TextFormField(
-                            cursorColor: Theme.of(context).cursorColor,
-                            // initialValue: 'Username',
-                            decoration: const InputDecoration(
-                              border: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              enabledBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                              labelText: 'Password',
-                              labelStyle: TextStyle(
-                                color: Color(0xffAEAEAE),
-                              ),
-                              // enabledBorder: UnderlineInputBorder(
-                              //   borderSide: BorderSide(color: Color(0xff008080)),
-                              // ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 10,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            TextButton(onPressed: (){
-                              debugPrint("Forgot Password");
-                              Navigator.push(context, MaterialPageRoute(builder: (_) => const ForgotPassword()));
-                            },
-                              child: const Text("Forgot Password",style: TextStyle(color: Color(0xff008080)),),)
-                          ],
-                        ),
-                        const SizedBox(height: 10,),
                         Center(
                           child: TextButton(onPressed: (){
-                            debugPrint("Log In");
-                            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const TokenNumberAndTime()));
+                            debugPrint("Get OTP");
+                            Navigator.push(context, MaterialPageRoute(builder: (_) => const Otp()));
                           },
                             child: Material(
                               elevation: 10,
@@ -125,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                                 ),
                                 padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
                                 child: const Text(
-                                  "Log In",
+                                  "Get OTP",
                                   style: TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
@@ -147,4 +111,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-

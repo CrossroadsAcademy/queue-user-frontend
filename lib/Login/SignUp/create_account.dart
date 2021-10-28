@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:queue/Login/OTP/otp.dart';
+
+import 'login_page.dart';
 
 class CreateAccount extends StatefulWidget {
   const CreateAccount({Key? key}) : super(key: key);
@@ -128,7 +131,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         Center(
                           child: TextButton(onPressed: (){
                             debugPrint("Get OTP");
-                            // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Otp()));
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Otp()));
                           },
                             child: Material(
                               elevation: 10,
@@ -164,7 +167,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     ),
                     TextButton(onPressed: (){
                       debugPrint("Sign in");
-                      // Navigator.push(context, MaterialPageRoute(builder: (_) => const LoginPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => const LoginPage()));
                     },
                       child: const Text("Sign in",style: TextStyle(color: Color(0xff008080)),),)
                   ],
