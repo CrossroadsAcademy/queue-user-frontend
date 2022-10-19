@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../presentation/constant/color/colors.dart';
+import '../constant/color/colors.dart';
 
 class ElvatedButtonWidget extends StatelessWidget {
   const ElvatedButtonWidget({
     super.key,
     required this.buttonText,
+    required this.onpressed,
   });
 
   final String buttonText;
+  final Function() onpressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class ElvatedButtonWidget extends StatelessWidget {
           const Size(180, 40),
         ),
       ),
-      onPressed: () {},
+      onPressed: onpressed,
       child: Text(
         buttonText,
       ),

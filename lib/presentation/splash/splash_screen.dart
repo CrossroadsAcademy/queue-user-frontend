@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Timer(
       const Duration(seconds: 3),
-      () => Navigator.of(context).push(
+      () => Navigator.of(context).pushReplacement(
         MaterialPageRoute<IntroductionScreen>(
           builder: (BuildContext _) => const IntroductionScreen(),
         ),

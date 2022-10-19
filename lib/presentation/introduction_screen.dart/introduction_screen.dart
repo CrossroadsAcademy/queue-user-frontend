@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../widget/elevated_button_widget.dart';
 import '../constant/color/colors.dart';
+import '../home/home_screen.dart';
+import '../widget/elevated_button_widget.dart';
 
 class IntroductionScreen extends StatelessWidget {
   const IntroductionScreen({super.key});
@@ -16,8 +17,15 @@ class IntroductionScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Image.asset('assets/images/otp.png'),
-              const ElvatedButtonWidget(
+              ElvatedButtonWidget(
                 buttonText: 'Get Started',
+                onpressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<HomeScreen>(
+                      builder: (BuildContext _) => const HomeScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
