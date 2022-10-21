@@ -10,16 +10,24 @@ class GoogleFont {
     fontWeight: FontWeight.w600,
     color: splashText,
   );
-  static final TextStyle headTextStyle = GoogleFonts.montserrat(
-    fontSize: 26,
-    fontWeight: FontWeight.w800,
+  static final TextStyle headTextStyleMont = GoogleFonts.montserrat(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
   );
-  static final TextStyle subHeadTextStyle = GoogleFonts.montserrat(
-    fontSize: 12,
+  static final TextStyle headTextStyle = GoogleFonts.poppins(
+    fontSize: 28,
+    fontWeight: FontWeight.w600,
+  );
+  static final TextStyle otpTextStyle = GoogleFonts.poppins(
+    fontSize: 28,
+    fontWeight: FontWeight.w500,
+  );
+  static final TextStyle subHeadTextStyle = GoogleFonts.poppins(
+    fontSize: 14,
     fontWeight: FontWeight.w400,
     color: appSubTextColor,
   );
-  static final TextStyle textButtonStyle = GoogleFonts.montserrat(
+  static final TextStyle textButtonStyle = GoogleFonts.poppins(
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: appMainColor,

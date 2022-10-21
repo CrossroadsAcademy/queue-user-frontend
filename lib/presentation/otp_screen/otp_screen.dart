@@ -34,6 +34,19 @@ class OtpScreen extends StatelessWidget {
                 Center(child: Image.asset('assets/images/otp.png')),
               ],
             ),
+            kHeight50,
+            Column(
+              children: <Widget>[
+                Text(
+                  'A 4 Digit code has been sent to',
+                  style: GoogleFont.subHeadTextStyle,
+                ),
+                Text(
+                  '+91 9087654321',
+                  style: GoogleFont.otpTextStyle,
+                )
+              ],
+            )
           ],
         ),
       ),
