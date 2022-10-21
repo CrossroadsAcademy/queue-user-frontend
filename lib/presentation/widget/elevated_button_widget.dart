@@ -7,9 +7,11 @@ class ElvatedButtonWidget extends StatelessWidget {
     super.key,
     required this.buttonText,
     required this.onpressed,
+    this.width = 180,
   });
 
   final String buttonText;
+  final double width;
   final Function() onpressed;
 
   @override
@@ -23,7 +25,7 @@ class ElvatedButtonWidget extends StatelessWidget {
           ),
         ),
         minimumSize: MaterialStateProperty.all(
-          const Size(180, 40),
+          Size(width, 40),
         ),
       ),
       onPressed: onpressed,
