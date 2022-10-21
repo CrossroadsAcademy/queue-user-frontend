@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constant/color/colors.dart';
 import '../signup/signup_screen.dart';
-import '../widget/elevated_button_widget.dart';
+import '../widget/eleveted_button_widget/elevated_button_widget.dart';
 
 class IntroductionScreen extends StatelessWidget {
   const IntroductionScreen({super.key});
@@ -22,7 +22,7 @@ class IntroductionScreen extends StatelessWidget {
                 onpressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute<SignupScreen>(
-                      builder: (BuildContext _) => const SignupScreen(),
+                      builder: (BuildContext _) => SignupScreen(),
                     ),
                   );
                 },

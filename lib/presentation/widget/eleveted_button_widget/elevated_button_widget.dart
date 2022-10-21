@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constant/color/colors.dart';
+import '../../constant/color/colors.dart';
 
 class ElvatedButtonWidget extends StatelessWidget {
   const ElvatedButtonWidget({
