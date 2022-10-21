@@ -12,7 +12,7 @@ class GoogleFont {
   );
   static final TextStyle headTextStyle = GoogleFonts.montserrat(
     fontSize: 26,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w800,
   );
   static final TextStyle subHeadTextStyle = GoogleFonts.montserrat(
     fontSize: 12,
