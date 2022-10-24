@@ -23,67 +23,69 @@ class SignupScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                kHeight,
-                Text(
-                  'Create Account.',
-                  style: GoogleFont.headTextStyle,
-                ),
-                Text(
-                  'Signup with your phone number',
-                  style: GoogleFont.subHeadTextStyle,
-                ),
-                kHeight20,
-                Center(child: Image.asset('assets/images/create.png')),
-              ],
-            ),
-            Form(
-              key: _formKey,
-              child: Column(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  TextFieldWidget(
-                    controller: _sampleController,
-                    hintText: 'Username',
-                  ),
-                  TextFieldWidget(
-                    controller: _sampleController,
-                    hintText: 'Phone',
-                  ),
-                  TextFieldWidget(
-                    controller: _sampleController,
-                    hintText: 'Password',
-                  ),
-                  kHeight10,
-                  ElvatedButtonWidget(
-                    buttonText: 'Get OTP',
-                    onpressed: () {},
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'Already have an account?',
-                        style: GoogleFont.subHeadTextStyle,
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Sign In',
-                          style: GoogleFont.textButtonStyle,
-                        ),
-                      )
-                    ],
-                  ),
                   kHeight,
+                  Text(
+                    'Create Account.',
+                    style: GoogleFont.headTextStyle,
+                  ),
+                  Text(
+                    'Signup with your phone number',
+                    style: GoogleFont.subHeadTextStyle,
+                  ),
+                  kHeight20,
+                  Center(child: Image.asset('assets/images/create.png')),
                 ],
               ),
-            )
-          ],
+              Form(
+                key: _formKey,
+                child: Column(
+                  children: <Widget>[
+                    TextFieldWidget(
+                      controller: _sampleController,
+                      hintText: 'Username',
+                    ),
+                    TextFieldWidget(
+                      controller: _sampleController,
+                      hintText: 'Phone',
+                    ),
+                    TextFieldWidget(
+                      controller: _sampleController,
+                      hintText: 'Password',
+                    ),
+                    kHeight10,
+                    ElvatedButtonWidget(
+                      buttonText: 'Get OTP',
+                      onpressed: () {},
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Already have an account?',
+                          style: GoogleFont.subHeadTextStyle,
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Sign In',
+                            style: GoogleFont.textButtonStyle,
+                          ),
+                        )
+                      ],
+                    ),
+                    kHeight,
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
