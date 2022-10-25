@@ -9,6 +9,15 @@ import '../widget/text_field_widget/text_field_widget.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({super.key});
+
+  static const String routeName = '/signup';
+  static Route<SignupScreen> route() {
+    return MaterialPageRoute<SignupScreen>(
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => SignupScreen(),
+    );
+  }
+
   final GlobalKey _formKey = GlobalKey<FormState>();
   final TextEditingController _sampleController = TextEditingController();
 
@@ -19,7 +28,10 @@ class SignupScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 25,
+              vertical: 10,
+            ),
             child: Column(
               children: <Widget>[
                 Column(
@@ -35,7 +47,9 @@ class SignupScreen extends StatelessWidget {
                       style: GoogleFont.subHeadTextStyle,
                     ),
                     kHeight20,
-                    Center(child: Image.asset('assets/images/create.png')),
+                    Center(
+                      child: Image.asset('assets/images/create.png'),
+                    ),
                   ],
                 ),
                 kHeight50,
@@ -59,11 +73,7 @@ class SignupScreen extends StatelessWidget {
                       ElvatedButtonWidget(
                         buttonText: 'Get OTP',
                         onpressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute<OtpScreen>(
-                              builder: (BuildContext _) => OtpScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/otp');
                         },
                       ),
                       Row(
@@ -75,16 +85,17 @@ class SignupScreen extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute<OtpScreen>(
-                                  builder: (BuildContext _) => LoginScreen(),
-                                ),
-                              );
+                              Navigator.pushNamed(context, '/login');
+                              // Navigator.of(context).push(
+                              //   MaterialPageRoute<OtpScreen>(
+                              //     builder: (BuildContext _) => LoginScreen(),
+                              //   ),
+                              // );
                             },
-                              child: Text(
-                                'Sign In',
-                                style: GoogleFont.textButtonStyle,
-                              ),
+                            child: Text(
+                              'Sign In',
+                              style: GoogleFont.textButtonStyle,
+                            ),
                           )
                         ],
                       ),

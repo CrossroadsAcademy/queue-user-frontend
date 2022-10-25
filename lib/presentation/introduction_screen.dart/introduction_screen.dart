@@ -30,11 +30,7 @@ class IntroductionScreen extends StatelessWidget {
               ElvatedButtonWidget(
                 buttonText: 'Get Started',
                 onpressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<SignupScreen>(
-                      builder: (BuildContext _) => SignupScreen(),
-                    ),
-                  );
+                  Navigator.pushReplacementNamed(context, '/login');
                 },
               ),
             ],
