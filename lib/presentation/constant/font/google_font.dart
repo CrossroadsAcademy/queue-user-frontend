@@ -10,6 +10,7 @@ class GoogleFont {
     fontWeight: FontWeight.w600,
     color: splashText,
   );
+
   static final TextStyle headTextStyleMont = GoogleFonts.montserrat(
     fontSize: 28,
     fontWeight: FontWeight.w600,
@@ -28,6 +29,7 @@ class GoogleFont {
     color: appSubTextColor,
   );
   static final TextStyle textButtonStyle = GoogleFonts.poppins(
+
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: appMainColor,
