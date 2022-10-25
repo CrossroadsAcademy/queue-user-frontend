@@ -18,7 +18,7 @@ class IntroductionScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Image.asset('assets/images/otp.png'),
+              Image.asset('assets/images/queueIntro.png'),
               ElvatedButtonWidget(
                 buttonText: 'Get Started',
                 onpressed: () {
