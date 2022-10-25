@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'domain/routeconfig/app_router.dart';
 import 'presentation/splash/splash_screen.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const SplashScreen(),
+      onGenerateRoute: AppRoute.onGenerateRoute,
+      initialRoute: '/',
     );
   }
 }
