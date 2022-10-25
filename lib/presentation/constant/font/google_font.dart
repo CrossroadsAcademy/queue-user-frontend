@@ -28,8 +28,16 @@ class GoogleFont {
     fontWeight: FontWeight.w400,
     color: appSubTextColor,
   );
+  static final TextStyle miniHeadTextStyle = GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: appSubTextColor,
+  );
+  static final TextStyle forgotpasswordTextStyle = GoogleFonts.poppins(
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
+  );
   static final TextStyle textButtonStyle = GoogleFonts.poppins(
-
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: appMainColor,
