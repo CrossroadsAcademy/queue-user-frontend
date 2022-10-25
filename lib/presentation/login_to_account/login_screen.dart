@@ -15,56 +15,63 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: SingleChildScrollView(
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                'Login to Account.',
-                style: GoogleFont.headTextStyle,
-              ),
-              Text(
-                'Login with your Username & Password',
-                style: GoogleFont.subHeadTextStyle,
-              ),
-              kHeight50,
-              Image.asset(
-                'assets/images/login_account.png',
-                height: 250,
-              ),
-              kHeight20,
-              TextFieldWidget(
-                  controller: usernameController, hintText: 'Username'),
-              TextFieldWidget(
-                  controller: passwordController, hintText: 'Password'),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: GestureDetector(
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<ForgotPasswordScreen>(
-                      builder: (BuildContext _) => ForgotPasswordScreen(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 20,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Login to Account.',
+                  style: GoogleFont.headTextStyle,
+                ),
+                Text(
+                  'Login with your Username & Password',
+                  style: GoogleFont.subHeadTextStyle,
+                ),
+                kHeight50,
+                Image.asset(
+                  'assets/images/login_account.png',
+                  height: 250,
+                ),
+                kHeight20,
+                TextFieldWidget(
+                  controller: usernameController,
+                  hintText: 'Username',
+                ),
+                TextFieldWidget(
+                  controller: passwordController,
+                  hintText: 'Password',
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: GestureDetector(
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute<ForgotPasswordScreen>(
+                        builder: (BuildContext _) => ForgotPasswordScreen(),
+                      ),
+                    ),
+                    child: Text(
+                      'Forgot Password',
+                      style: GoogleFont.textButtonStyle,
                     ),
                   ),
-                  child: Text(
-                    'Forgot Password',
-                    style: GoogleFont.textButtonStyle,
+                ),
+                kHeight20,
+                Center(
+                  child: ElvatedButtonWidget(
+                    buttonText: 'Log In',
+                    onpressed: () {},
                   ),
-                ),
-              ),
-              kHeight20,
-              Center(
-                child: ElvatedButtonWidget(
-                  buttonText: 'Log In',
-                  onpressed: () {},
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
-      )),
+      ),
     );
   }
 }

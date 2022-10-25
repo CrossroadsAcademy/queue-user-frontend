@@ -9,6 +9,14 @@ import '../widget/eleveted_button_widget/elevated_button_widget.dart';
 class IntroductionScreen extends StatelessWidget {
   const IntroductionScreen({super.key});
 
+  static const String routeName = '/introduction';
+  static Route<IntroductionScreen> route() {
+    return MaterialPageRoute<IntroductionScreen>(
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => const IntroductionScreen(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
