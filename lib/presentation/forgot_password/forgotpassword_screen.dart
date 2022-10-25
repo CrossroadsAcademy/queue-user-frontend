@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constant/color/colors.dart';
 import '../constant/font/google_font.dart';
 import '../constant/size/constant_size.dart';
 import '../widget/eleveted_button_widget/elevated_button_widget.dart';
@@ -6,11 +7,33 @@ import '../widget/text_field_widget/text_field_widget.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
   ForgotPasswordScreen({super.key});
+
+  static const String routeName = '/forgot';
+  static Route<ForgotPasswordScreen> route() {
+    return MaterialPageRoute<ForgotPasswordScreen>(
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => ForgotPasswordScreen(),
+    );
+  }
+
   final TextEditingController otpController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ktrasperant,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: kBlackText,
+          ),
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(

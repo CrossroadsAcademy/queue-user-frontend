@@ -8,6 +8,14 @@ import '../widget/otp_text_field/otp_text_field.dart';
 class OtpScreen extends StatelessWidget {
   OtpScreen({super.key});
 
+  static const String routeName = '/otp';
+  static Route<OtpScreen> route() {
+    return MaterialPageRoute<OtpScreen>(
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => OtpScreen(),
+    );
+  }
+
   final TextEditingController _sampleController = TextEditingController();
 
   @override

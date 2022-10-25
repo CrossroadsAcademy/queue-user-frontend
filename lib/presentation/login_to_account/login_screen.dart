@@ -8,6 +8,15 @@ import '../widget/text_field_widget/text_field_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
+
+  static const String routeName = '/login';
+  static Route<LoginScreen> route() {
+    return MaterialPageRoute<LoginScreen>(
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => LoginScreen(),
+    );
+  }
+
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -49,11 +58,7 @@ class LoginScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomRight,
                   child: GestureDetector(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute<ForgotPasswordScreen>(
-                        builder: (BuildContext _) => ForgotPasswordScreen(),
-                      ),
-                    ),
+                    onTap: () => Navigator.pushNamed(context, '/forgot'),
                     child: Text(
                       'Forgot Password',
                       style: GoogleFont.textButtonStyle,
@@ -64,9 +69,28 @@ class LoginScreen extends StatelessWidget {
                 Center(
                   child: ElvatedButtonWidget(
                     buttonText: 'Log In',
-                    onpressed: () {},
+                    onpressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
                   ),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "Don't have an account?",
+                      style: GoogleFont.subHeadTextStyle,
+                    ),
+                    TextButton(
+                      onPressed: () => Navigator.pushNamed(context, '/signup'),
+                      child: Text(
+                        'Sign Up',
+                        style: GoogleFont.textButtonStyle,
+                      ),
+                    )
+                  ],
+                ),
+                kHeight,
               ],
             ),
           ),
