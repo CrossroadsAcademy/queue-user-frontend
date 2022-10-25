@@ -38,9 +38,24 @@ class GoogleFont {
     fontWeight: FontWeight.w600,
   );
   static final TextStyle textButtonStyle = GoogleFonts.poppins(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
     color: appMainColor,
     decoration: TextDecoration.underline,
+  );
+  static final TextStyle otpSubheaadTextStyle = GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: appBlackColor,
+  );
+  static final TextStyle otpTimeTextStyle = GoogleFonts.poppins(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: appBlackColor,
+  );
+  static final TextStyle otpExpireTextStyle = GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: appBlackColor,
   );
 }

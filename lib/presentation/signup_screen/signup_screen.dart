@@ -86,11 +86,6 @@ class SignupScreen extends StatelessWidget {
                           TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/login');
-                              // Navigator.of(context).push(
-                              //   MaterialPageRoute<OtpScreen>(
-                              //     builder: (BuildContext _) => LoginScreen(),
-                              //   ),
-                              // );
                             },
                             child: Text(
                               'Sign In',
