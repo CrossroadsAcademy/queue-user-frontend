@@ -71,7 +71,9 @@ class ForgotPasswordScreen extends StatelessWidget {
               Center(
                 child: ElvatedButtonWidget(
                   buttonText: 'Get OTP',
-                  onpressed: () {},
+                  onpressed: () {
+                    
+                  },
                 ),
               ),
             ],
