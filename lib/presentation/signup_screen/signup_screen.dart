@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import '../constant/color/colors.dart';
 import '../constant/font/google_font.dart';
 import '../constant/size/constant_size.dart';
-import '../login_to_account/login_screen.dart';
-import '../otp_screen/otp_screen.dart';
+
 import '../widget/eleveted_button_widget/elevated_button_widget.dart';
 import '../widget/text_field_widget/text_field_widget.dart';
 

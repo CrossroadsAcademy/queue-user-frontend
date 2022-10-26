@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constant/font/google_font.dart';
 import '../constant/size/constant_size.dart';
-import '../forgot_password/forgotpassword_screen.dart';
+
 import '../widget/eleveted_button_widget/elevated_button_widget.dart';
 import '../widget/text_field_widget/text_field_widget.dart';
 

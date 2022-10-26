@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../constant/color/colors.dart';
 
-import '../signup_screen/signup_screen.dart';
 
 import '../widget/eleveted_button_widget/elevated_button_widget.dart';
 
