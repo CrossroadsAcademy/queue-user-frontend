@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constant/color/colors.dart';
 import '../constant/font/google_font.dart';
 import '../constant/size/constant_size.dart';
+import '../resent_otp_screen/resent_otp_screen.dart';
 import '../widget/eleveted_button_widget/elevated_button_widget.dart';
 import '../widget/text_field_widget/text_field_widget.dart';
 
@@ -72,7 +73,11 @@ class ForgotPasswordScreen extends StatelessWidget {
                 child: ElvatedButtonWidget(
                   buttonText: 'Get OTP',
                   onpressed: () {
-                    
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ResentOTPScreen(),
+                        ));
                   },
                 ),
               ),
