@@ -1,4 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import '../constant/colors/colors.dart';
+import '../constant/fonts/google_fonts.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -13,6 +16,19 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    //Navigator.pushReplacementNamed(context, '/login')
+    Timer(const Duration(seconds: 3),
+        () => Navigator.pushReplacementNamed(context, '/introduction'));
+    return Scaffold(
+      backgroundColor: appMainColor,
+      body: SafeArea(
+        child: Center(
+          child: Text(
+            'Queue',
+            style: GoogleFont.style,
+          ),
+        ),
+      ),
+    );
   }
 }
