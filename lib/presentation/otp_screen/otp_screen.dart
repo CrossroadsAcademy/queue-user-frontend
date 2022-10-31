@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constant/colors/colors.dart';
 import '../constant/fonts/google_fonts.dart';
 import '../constant/sizes/constant_size.dart';
+import '../widgets/elevated_button_widget/elevated_button.dart';
 import '../widgets/otp_text_field/otp_text_field.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -74,6 +75,44 @@ class OtpScreen extends StatelessWidget {
                       OtpTextField(
                         controller: _sampleController,
                       ),
+                    ],
+                  ),
+                  kHeight,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Code expires in :',
+                        style: GoogleFont.otpExpireTextStyle,
+                      ),
+                      Text(
+                        ' 2:59',
+                        style: GoogleFont.otpTimeTextStyle,
+                      ),
+                    ],
+                  ),
+                  ElvatedButtonWidget(
+                    width: 250,
+                    buttonText: 'Verify & Proceed',
+                    onpressed: () {},
+                  ),
+                  kHeight20,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Don't Recieve the OTP?",
+                        style: GoogleFont.otpSubheaadTextStyle,
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          // Navigator.pushNamed(context, '/login');
+                        },
+                        child: Text(
+                          'Resend OTP',
+                          style: GoogleFont.textButtonStyle,
+                        ),
+                      )
                     ],
                   ),
                 ],
