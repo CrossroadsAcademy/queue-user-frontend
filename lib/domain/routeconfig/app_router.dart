@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
+import '../../presentation/forgot_password/forgot_password_screen.dart';
+import '../../presentation/home/home_screen.dart';
 import '../../presentation/introduction_screen/introduction_screen.dart';
 import '../../presentation/login_to_account/login_screen.dart';
 import '../../presentation/otp_screen/otp_screen.dart';
@@ -22,10 +24,10 @@ class AppRoute {
         return SignupScreen.route();
       case OtpScreen.routeName:
         return OtpScreen.route();
-      // case ForgotPasswordScreen.routeName:
-      //   return ForgotPasswordScreen.route();
-      // case HomeScreen.routeName:
-      //   return HomeScreen.route();
+      case ForgotPasswordScreen.routeName:
+        return ForgotPasswordScreen.route();
+      case HomeScreen.routeName:
+        return HomeScreen.route();
 
       default:
         return _errorRoute();

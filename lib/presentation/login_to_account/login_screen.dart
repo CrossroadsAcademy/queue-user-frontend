@@ -68,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                   child: ElvatedButtonWidget(
                     buttonText: 'Log In',
                     onpressed: () {
-                      // Navigator.pushNamed(context, '/home');
+                      Navigator.pushNamed(context, '/home');
                     },
                   ),
                 ),
