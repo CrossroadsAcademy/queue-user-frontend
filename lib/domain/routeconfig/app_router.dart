@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
+import '../../presentation/introduction_screen/introduction_screen.dart';
 import '../../presentation/splash/splash_screen.dart';
 
 class AppRoute {
@@ -10,8 +11,8 @@ class AppRoute {
     switch (settings.name) {
       case '/':
         return SplashScreen.route();
-      // case IntroductionScreen.routeName:
-      //   return IntroductionScreen.route();
+      case IntroductionScreen.routeName:
+        return IntroductionScreen.route();
       // case LoginScreen.routeName:
       //   return LoginScreen.route();
       // case SignupScreen.routeName:
