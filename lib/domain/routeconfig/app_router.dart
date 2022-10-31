@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import '../../presentation/introduction_screen/introduction_screen.dart';
+import '../../presentation/login_to_account/login_screen.dart';
 import '../../presentation/splash/splash_screen.dart';
 
 class AppRoute {
@@ -13,8 +14,8 @@ class AppRoute {
         return SplashScreen.route();
       case IntroductionScreen.routeName:
         return IntroductionScreen.route();
-      // case LoginScreen.routeName:
-      //   return LoginScreen.route();
+      case LoginScreen.routeName:
+        return LoginScreen.route();
       // case SignupScreen.routeName:
       //   return SignupScreen.route();
       // case OtpScreen.routeName:
