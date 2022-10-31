@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constant/colors/colors.dart';
 import '../constant/fonts/google_fonts.dart';
 import '../constant/sizes/constant_size.dart';
+import '../widgets/otp_text_field/otp_text_field.dart';
 
 class OtpScreen extends StatelessWidget {
   OtpScreen({super.key});
@@ -14,6 +15,8 @@ class OtpScreen extends StatelessWidget {
       builder: (_) => OtpScreen(),
     );
   }
+
+  final TextEditingController _sampleController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +47,37 @@ class OtpScreen extends StatelessWidget {
                 ],
               ),
               kHeight,
+              Column(
+                children: <Widget>[
+                  Text(
+                    'A 4 Digit code has been sent to',
+                    style: GoogleFont.subHeadTextStyle,
+                  ),
+                  Text(
+                    '+91 9087654321',
+                    style: GoogleFont.otpTextStyle,
+                  ),
+                  kHeight10,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      OtpTextField(
+                        isFocused: true,
+                        controller: _sampleController,
+                      ),
+                      OtpTextField(
+                        controller: _sampleController,
+                      ),
+                      OtpTextField(
+                        controller: _sampleController,
+                      ),
+                      OtpTextField(
+                        controller: _sampleController,
+                      ),
+                    ],
+                  ),
+                ],
+              )
             ],
           ),
         ),
