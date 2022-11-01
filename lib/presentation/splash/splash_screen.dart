@@ -16,9 +16,13 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Navigator.pushReplacementNamed(context, '/login')
-    Timer(const Duration(seconds: 3),
-        () => Navigator.pushReplacementNamed(context, '/introduction'));
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) {
+        Timer(const Duration(seconds: 3),
+            () => Navigator.pushReplacementNamed(context, '/introduction'));
+      },
+    );
+
     return Scaffold(
       backgroundColor: appMainColor,
       body: SafeArea(

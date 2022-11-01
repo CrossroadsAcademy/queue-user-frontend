@@ -11,6 +11,23 @@ class GoogleFont {
     color: splashText,
   );
 
+  static final TextStyle otpSubheaadTextStyle = GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: appBlackColor,
+  );
+  static final TextStyle otpTimeTextStyle = GoogleFonts.poppins(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: appBlackColor,
+  );
+
+  static final TextStyle otpExpireTextStyle = GoogleFonts.poppins(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: appBlackColor,
+  );
+
   static final TextStyle headTextStyleMont = GoogleFonts.montserrat(
     fontSize: 28,
     fontWeight: FontWeight.w600,
